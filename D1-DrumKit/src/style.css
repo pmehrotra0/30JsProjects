@@ -1,0 +1,47 @@
+html {
+  font-size: 10px;
+  background: url('../background.jpg') bottom center;
+  background-size: cover;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+h1 {
+	color: white;
+	font-size: 46px;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+    justify-content: space-around;
+	align-items: center;
+	margin-top: 220px;
+}
+
+li {
+	border: 2px solid black;
+    padding: 5px 10px;
+    width: 50px;
+	transition: all 0.1s;
+}
+
+li>div{
+	text-align: center;
+}
+
+li>div:first-child{
+	font-size: 30px;
+}
+
+.playing{
+	box-shadow: 5px 5px 5px yellow;
+	border: 2px solid yellow;
+	transform: scale3d(1.1, 1.1, 1.1);
+}

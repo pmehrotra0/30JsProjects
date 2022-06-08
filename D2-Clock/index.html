@@ -118,7 +118,8 @@
 		setInterval(updateClock, 1000);
 		
 		let time = new Date();
-		let date = `${time.getDate()}/${time.getMonth()}/${time.getYear()}`
+		let date = `${time.getDate()}/${time.getMonth()}/${time.getFullYear()}`
+		console.log(date);
 		document.querySelector(".date").innerHTML = date;
 	</script>
 </body>

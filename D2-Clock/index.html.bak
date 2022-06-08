@@ -93,26 +93,34 @@
   </style>
 
 	<script>
+		let secondHand = document.querySelector(".second-hand");
+		let minHand = document.querySelector(".min-hand");
+		let hourHand = document.querySelector(".hour-hand");
+		
 		function updateClock(){
 			let time = new Date();
 			let secondDegree = ((time.getSeconds()/60) * 360)+90;
 			let minDegree = ((time.getMinutes()/60) * 360) + 90;
 			let hourDegree = (((Math.floor(time.getHours()/2))/12) * 360) + 90;
 			
-			let secondHand = document.querySelector(".second-hand");
+			
 			secondHand.style.transform = `rotate(${secondDegree}deg)`;
 			
-			let minHand = document.querySelector(".min-hand");
+			
 			minHand.style.transform = `rotate(${minDegree}deg)`;
 			
-			let hourHand = document.querySelector(".hour-hand");
+			
 			hourHand.style.transform = `rotate(${hourDegree}deg)`;
 			
-			let date = `${time.getDate()} / ${time.getMonth()} / ${time.getYear()}`
+			
 			console.log(date);
 		}
 		setInterval(updateClock, 1000);
-
+		
+		let time = new Date();
+		let date = `${time.getDate()}/${time.getMonth()}/${time.getYear()}`
+		console.log(date);
+		document.querySelector(".date").innerHTML = date;
 	</script>
 </body>
 </html>
